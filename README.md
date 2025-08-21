@@ -12,9 +12,10 @@
    
    a. 若 `binary[position] == '1'`，則把該位的權重加到總和：
      `decimal ← decimal + 2^power`。
+   
    b. 將 `power ← power − 1`（無論該位是否為 1 都遞減）。
    
-4. 輸出 `decimal`。
+5. 輸出 `decimal`。
 
 > 說明：此流程與程式一致——從最左位起，維持一個由 `N−1` 到 `0` 的指數 `power`；遇到 `1` 就把對應的 $2^{power}$ 累加，最後得到十進位值。
 
