@@ -30,13 +30,17 @@
    2.1 計算 `N ← ⌊log2(decimal)⌋`，這是十進位數中最大的 2 的冪次指數（最左邊位元的位權）。
 
 3. 由高位到低位逐一決定每一位
+
    對 `i` 由 `N` 遞減到 `0` 重複：
+   
    3.1 設 `divisor ← 2^i`。
+   
    3.2 若 `dividend / divisor > 0`（整數除法，等價於 `dividend ≥ divisor`）：
      a) 在 `binary` 後方加入字元 `'1'`。
      b) 更新 `dividend ← dividend − divisor`。
+   
    3.3 否則：
      a) 在 `binary` 後方加入字元 `'0'`。
 
-4. 回傳結果
+5. 回傳結果
    4.1 回傳字串 `binary`。
